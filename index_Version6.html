@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Untuk Anisa Aulia Zahra</title>
+  <style>
+    body {
+      min-height: 100vh;
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', sans-serif;
+      color: #d6336c;
+      text-align: center;
+      background: url('bg.jpg') no-repeat center center fixed;
+      background-size: cover;
+      position: relative;
+    }
+    body::before {
+      content: '';
+      position: fixed;
+      top: 0; left: 0; width: 100vw; height: 100vh;
+      background: rgba(255, 192, 203, 0.45);
+      z-index: 0;
+      pointer-events: none;
+    }
+    h1 {
+      margin-top: 2em;
+      font-size: 2.5em;
+      font-weight: bold;
+      position: relative;
+      z-index: 1;
+      text-shadow: 1px 1px 8px #fff;
+    }
+    .hearts {
+      margin: 30px 0;
+      font-size: 2em;
+      animation: float 2s infinite alternate;
+      position: relative;
+      z-index: 1;
+    }
+    @keyframes float {
+      0% { transform: translateY(0); }
+      100% { transform: translateY(-15px); }
+    }
+    .card {
+      background: #fff0f6cc;
+      border-radius: 20px;
+      padding: 2em;
+      margin: 0 auto 2em auto;
+      max-width: 400px;
+      box-shadow: 0 4px 20px rgba(255, 182, 193, 0.2);
+      position: relative;
+      z-index: 1;
+    }
+    button {
+      background: #ff69b4;
+      color: white;
+      border: none;
+      border-radius: 25px;
+      padding: 12px 30px;
+      font-size: 1em;
+      cursor: pointer;
+      margin-top: 1em;
+      transition: background 0.2s;
+      position: relative;
+      z-index: 1;
+    }
+    button:hover {
+      background: #d6336c;
+    }
+    .message {
+      font-size: 1.2em;
+      margin-top: 20px;
+      min-height: 2em;
+      position: relative;
+      z-index: 1;
+    }
+  </style>
+</head>
+<body>
+  <h1>Hai Sayangku Anisa Aulia Zahra!</h1>
+  <div class="hearts">💗💖💓💞💘</div>
+  <div class="card">
+    <p>Kamu adalah alasan aku masih semangat loh hari ini 😊</p>
+    <p>Aku bikin ini khusus untuk kamu, supaya kamu bahagia dan ga bete lagi. Maafin aku ya!</p>
+    <button onclick="showMessage()">Klik disini sayang 💌</button>
+    <div class="message" id="sweetMessage"></div>
+  </div>
+  <script>
+    const messages = [
+      "Kamu cantik bangett, paling cantik di dunia ini.",
+      "Senyum kamu buat dunia aku jadi lebih indah.",
+      "Aku bersyukur banget bisa kenal kamu.",
+      "Kamu sangat istimewa di hatiku.",
+      "Semangat ya! Aku selalu support kamu.",
+      "Hariku selalu happy saat sama kamu.",
+      "Jangan lupa, kamu itu luar biasa!",
+      "Aku sayang kamu, Adiinnn! 💖",
+      "Stopp insecure yaa, ada aku disiniii!!!!."
+    ];
+    function showMessage() {
+      const msg = messages[Math.floor(Math.random() * messages.length)];
+      document.getElementById('sweetMessage').textContent = msg;
+    }
+  </script>
+</body>
+</html>
